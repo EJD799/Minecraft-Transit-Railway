@@ -66,6 +66,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 			double displayPadZeros,
 			DisplayType displayType,
 			String displayDefaultText,
+		    String displayTemplateText,
 			double doorXMultiplier,
 			double doorZMultiplier,
 			DoorAnimationType doorAnimationType,
@@ -89,6 +90,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				displayPadZeros,
 				displayType,
 				displayDefaultText,
+			    displayTemplateText,
 				doorXMultiplier,
 				doorZMultiplier,
 				doorAnimationType,
@@ -581,6 +583,9 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				break;
 			case NEXT_STATION_UK:
 				text = vehicle.getIsOnRoute() ? DisplayType.getLondonNextStationString(routeName, thisStation, nextStation, vehicle.vehicleExtraData::iterateInterchanges, destination, doorsOpen, vehicle.vehicleExtraData.getIsTerminating()) : displayDefaultText;
+				break;
+			case TEMPLATE:
+				text = vehicle.getIsOnRoute() ? DisplayText.getTemplateText(displayTemplateText, vehicle) : displayDefaultText;
 				break;
 			default:
 				text = "";
