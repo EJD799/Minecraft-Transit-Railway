@@ -274,6 +274,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				displayPadZeros,
 				displayType,
 				displayDefaultText,
+			    displayTemplateText,
 				doorXMultiplier,
 				doorZMultiplier,
 				doorAnimationType,
