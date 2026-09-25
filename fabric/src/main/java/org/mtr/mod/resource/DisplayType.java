@@ -11,7 +11,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public enum DisplayType {
-	DESTINATION, ROUTE_NUMBER, DEPARTURE_INDEX, NEXT_STATION, NEXT_STATION_KCR, NEXT_STATION_MTR, NEXT_STATION_UK, ROUTE_COLOR, ROUTE_COLOR_ROUNDED;
+	DESTINATION, ROUTE_NUMBER, ROUTE_NAME, DEPARTURE_INDEX, NEXT_STATION, NEXT_STATION_KCR, NEXT_STATION_MTR, NEXT_STATION_UK, ROUTE_COLOR, ROUTE_COLOR_ROUNDED;
 
 	public static String getHongKongNextStationString(String thisStationName, String nextStationName, boolean atPlatform, boolean isKcr) {
 		if (atPlatform) {
