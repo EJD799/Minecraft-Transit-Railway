@@ -555,6 +555,9 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 			case ROUTE_NUMBER:
 				text = vehicle.getIsOnRoute() ? routeNumber : displayDefaultText;
 				break;
+			case ROUTE_NAME:
+				text = vehicle.getIsOnRoute() ? routeName : displayDefaultText;
+				break;
 			case DEPARTURE_INDEX:
 				if (vehicle.getIsOnRoute()) {
 					final StringBuilder stringBuilder = new StringBuilder(String.valueOf(vehicle.getDepartureIndex() + 1));
