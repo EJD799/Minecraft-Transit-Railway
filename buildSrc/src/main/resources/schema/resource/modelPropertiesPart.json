@@ -68,6 +68,9 @@
 		"displayDefaultText": {
 			"type": "string"
 		},
+		"displayTemplateText": {
+			"type": "string"
+		},
 		"doorXMultiplier": {
 			"type": "number"
 		},
@@ -116,6 +119,7 @@
 		"displayPadZeros",
 		"displayType",
 		"displayDefaultText",
+		"displayTemplateText",
 		"doorXMultiplier",
 		"doorZMultiplier",
 		"doorAnimationType",
