@@ -4,6 +4,8 @@ import org.mtr.core.data.InterchangeColorsForStationName;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.generated.lang.TranslationProvider;
 import org.mtr.mod.render.MainRenderer;
+import org.mtr.core.data.Vehicle;
+import org.mtr.mod.resource.ModelPropertiesPart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,5 +47,22 @@ public enum DisplayType {
 		}
 
 		return IGui.formatStationName(IGui.mergeStations(messages, "", " "));
+	}
+
+	public static String getTemplateText(String templateText, Vehicle vehicle) {
+        final String destination = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getThisRouteDestination(), vehicle.vehicleExtraData.getNextRouteDestination(), vehicle.vehicleExtraData.getPreviousRouteDestination(), displayDefaultText, vehicle);
+		final String routeNumber = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getThisRouteNumber(), vehicle.vehicleExtraData.getNextRouteNumber(), vehicle.vehicleExtraData.getPreviousRouteNumber(), displayDefaultText, vehicle);
+		final String routeName = ModelPropertiesPart.getOrDefault(routeNumber + " ", routeNumber, "") + getOrDefault(vehicle.vehicleExtraData.getThisRouteName(), vehicle.vehicleExtraData.getNextRouteName(), vehicle.vehicleExtraData.getPreviousRouteName(), displayDefaultText, vehicle).split("\|\|")[0];
+		final String thisStation = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getThisStationName(), vehicle.vehicleExtraData.getPreviousStationName());
+		final String nextStation = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getNextStationName(), vehicle.vehicleExtraData.getThisStationName(), vehicle.vehicleExtraData.getThisStationName());
+
+		String text = templateText;
+		text = text.replaceAll("%DESTINATION%", destination);
+		text = text.replaceAll("%ROUTE_NUMBER%", routeNumber);
+		text = text.replaceAll("%ROUTE_NAME%", routeName);
+		text = text.replaceAll("%THIS_STATION%", thisStation);
+		text = text.replaceAll("%NEXT_STATION%", nextStation);
+
+		return text;
 	}
 }
