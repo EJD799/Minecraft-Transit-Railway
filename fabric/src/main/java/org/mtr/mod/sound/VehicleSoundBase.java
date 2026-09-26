@@ -15,6 +15,8 @@ public abstract class VehicleSoundBase {
 		}
 	}
 
+	public abstract void playAllCars(Level world, BlockPos pos, int carIndex);
+
 	public abstract void dispose();
 
 	protected abstract void playDoorSound(BlockPos blockPos, boolean isOpen);
