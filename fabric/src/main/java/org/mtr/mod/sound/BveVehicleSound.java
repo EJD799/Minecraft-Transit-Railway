@@ -161,6 +161,13 @@ public class BveVehicleSound extends VehicleSoundBase {
 		oldSpeedChange = speedChange;
 		oldOnRoute = isOnRoute;
 		isCompressorActiveLastElapsed = isCompressorActive;
+
+
+		persistentVehicleData.playAllCars(
+            vehicleResource,
+            carNumber,
+            Init.newBlockPos(bogiePosition.x, bogiePosition.y, bogiePosition.z)
+        );
 	}
 
 	@Override
