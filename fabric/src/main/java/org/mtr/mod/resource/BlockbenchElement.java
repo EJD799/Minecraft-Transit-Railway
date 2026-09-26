@@ -34,9 +34,9 @@ public final class BlockbenchElement extends BlockbenchElementSchema {
 		final float x = -Utilities.getElement(to, 0, 0D).floatValue() - originX;
 		final float y = -Utilities.getElement(to, 1, 0D).floatValue() - originY - modelYOffset * 16;
 		final float z = Utilities.getElement(from, 2, 0D).floatValue() - originZ;
-		final float sizeX = Utilities.getElement(to, 0, 0D) - Utilities.getElement(from, 0, 0D);
-		final float sizeY = Utilities.getElement(to, 1, 0D) - Utilities.getElement(from, 1, 0D);
-		final float sizeZ = Utilities.getElement(to, 2, 0D) - Utilities.getElement(from, 2, 0D);
+		final int sizeX = (int) Math.round(Utilities.getElement(to, 0, 0D) - Utilities.getElement(from, 0, 0D));
+		final int sizeY = (int) Math.round(Utilities.getElement(to, 1, 0D) - Utilities.getElement(from, 1, 0D));
+		final int sizeZ = (int) Math.round(Utilities.getElement(to, 2, 0D) - Utilities.getElement(from, 2, 0D));
 
 		modelPart.addCuboid(x, y, z, sizeX, sizeY, sizeZ, (float) inflate, !shade || mirror_uv);
 
