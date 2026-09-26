@@ -66,10 +66,6 @@ public class LegacyVehicleSound extends VehicleSoundBase {
 	}
 
 	@Override
-	public void playAllCars(Level world, BlockPos pos, int carIndex) {
-	}
-
-	@Override
 	protected double getDoorCloseSoundTime() {
 		return legacyDoorCloseSoundTime;
 	}
