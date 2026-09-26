@@ -51,6 +51,7 @@ const DISPLAY_COLUMNS: { id: string, title: string, formatData: (modelProperties
 	{id: "displayPadZeros", title: "Pad Zeros", formatData: modelPropertiesPart => isDisplay(modelPropertiesPart) && isDepartureIndexDisplay(modelPropertiesPart) ? modelPropertiesPart.displayPadZeros.toString() : ""},
 	{id: "displayType", title: "Type", formatData: modelPropertiesPart => isDisplay(modelPropertiesPart) ? modelPropertiesPart.displayType : ""},
 	{id: "displayDefaultText", title: "Default Text", formatData: modelPropertiesPart => isDisplay(modelPropertiesPart) && !isRouteColorDisplay(modelPropertiesPart) ? modelPropertiesPart.displayDefaultText : ""},
+	{id: "displayTemplateText", title: "Template Text", formatData: modelPropertiesPart => isDisplay(modelPropertiesPart) && isTemplateDisplay(modelPropertiesPart) ? modelPropertiesPart.displayDefaultText : ""},
 ];
 
 export const CREATE_MODEL_PROPERTIES_PART = () => new ModelPropertiesPartWrapperDTO(

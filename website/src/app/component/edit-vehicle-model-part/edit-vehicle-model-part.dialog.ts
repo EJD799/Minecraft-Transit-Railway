@@ -60,6 +60,7 @@ export class EditVehicleModelPartDialog {
 			displayPadZeros: new FormControl(modelPropertiesPart.displayPadZeros),
 			displayType: new FormControl(modelPropertiesPart.displayType),
 			displayDefaultText: new FormControl(modelPropertiesPart.displayDefaultText),
+			displayTemplateText: new FormControl(modelPropertiesPart.displayTemplateText),
 			doorXMultiplier: new FormControl(modelPropertiesPart.doorXMultiplier),
 			doorZMultiplier: new FormControl(modelPropertiesPart.doorZMultiplier),
 			doorAnimationType: new FormControl(modelPropertiesPart.doorAnimationType),
@@ -108,6 +109,7 @@ export class EditVehicleModelPartDialog {
 			modelPropertiesPart.displayPadZeros = Math.max(0, Math.round(newData.displayPadZeros ?? defaultModelPropertiesPart.displayPadZeros));
 			modelPropertiesPart.displayType = newData.displayType ?? defaultModelPropertiesPart.displayType;
 			modelPropertiesPart.displayDefaultText = newData.displayDefaultText ?? defaultModelPropertiesPart.displayDefaultText;
+			modelPropertiesPart.displayTemplateText = newData.displayTemplateText ?? defaultModelPropertiesPart.displayTemplateText;
 			modelPropertiesPart.doorXMultiplier = newData.doorXMultiplier ?? defaultModelPropertiesPart.doorXMultiplier;
 			modelPropertiesPart.doorZMultiplier = newData.doorZMultiplier ?? defaultModelPropertiesPart.doorZMultiplier;
 			modelPropertiesPart.doorAnimationType = newData.doorAnimationType ?? defaultModelPropertiesPart.doorAnimationType;
@@ -176,6 +178,11 @@ export class EditVehicleModelPartDialog {
 
 	isDepartureIndexDisplay() {
 		return this.isDisplay() && this.formGroup.getRawValue().displayType === "DEPARTURE_INDEX";
+	}
+
+	isTemplateDisplay() {
+		const displayType = this.formGroup.getRawValue().displayType;
+		return this.isDisplay() && (displayType === "TEMPLATE");
 	}
 
 	isRouteColorDisplay() {
