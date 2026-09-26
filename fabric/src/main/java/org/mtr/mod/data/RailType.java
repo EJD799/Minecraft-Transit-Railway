@@ -20,6 +20,7 @@ public enum RailType implements IGui {
 	CABLE_CAR(30, MapColor.getWhiteMapped(), false, true, true, Rail.Shape.CABLE),
 	CABLE_CAR_STATION(2, MapColor.getWhiteMapped(), false, true, true, Rail.Shape.QUADRATIC),
 	RUNWAY(300, MapColor.getPalePurpleMapped(), false, true, false, Rail.Shape.QUADRATIC),
+	HELICOPTER(80, MapColor.getMagentaMapped(), true, false, true, Rail.Shape.QUADRATIC),
 	AIRPLANE_DUMMY(900, MapColor.getBlackMapped(), false, true, false, Rail.Shape.QUADRATIC);
 
 	public final int speedLimit;
@@ -40,6 +41,9 @@ public enum RailType implements IGui {
 
 	public static int getRailColor(Rail rail) {
 		if (rail.isPlatform()) {
+			if (rail.canConnectRemotely()) {
+				return HELICOPTER.color;
+			}
 			return PLATFORM.color;
 		} else if (rail.isSiding()) {
 			return SIDING.color;
