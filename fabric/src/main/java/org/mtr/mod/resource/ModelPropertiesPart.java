@@ -67,6 +67,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 			DisplayType displayType,
 			String displayDefaultText,
 		    String displayTemplateText,
+		    RenderStage displayRenderStage,
 			double doorXMultiplier,
 			double doorZMultiplier,
 			DoorAnimationType doorAnimationType,
@@ -91,6 +92,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				displayType,
 				displayDefaultText,
 			    displayTemplateText,
+			    displayRenderStage,
 				doorXMultiplier,
 				doorZMultiplier,
 				doorAnimationType,
@@ -220,15 +222,19 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 					break;
 				case DISPLAY:
 					if (vehicle != null) {
+						if (displayRenderStage == null) {
+                            displayRenderStage = RenderStage.LIGHT;
+						}
+						final ObjectIntImmutablePair<QueuedRenderLayer> renderProperties = getRenderProperties(displayRenderStage, light, vehicle);
 						if (displayType == DisplayType.ROUTE_COLOR || displayType == DisplayType.ROUTE_COLOR_ROUNDED) {
-							renderLineColor(storedMatrixTransformations, vehicle, fromResourcePackCreator);
+							renderLineColor(storedMatrixTransformations, vehicle, fromResourcePackCreator, renderProperties, light);
 						} else {
 							if (displayOptions.contains(DisplayOption.SEVEN_SEGMENT.toString())) {
-								renderSevenSegmentDisplay(storedMatrixTransformations, vehicle);
+								renderSevenSegmentDisplay(storedMatrixTransformations, vehicle, renderProperties, light);
 							} else if (displayOptions.contains(DisplayOption.SCROLL_NORMAL.toString()) || displayOptions.contains(DisplayOption.SCROLL_LIGHT_RAIL.toString())) {
-								renderScrollingDisplay(storedMatrixTransformations, vehicle, carNumber, scrollingDisplayIndexTracker);
+								renderScrollingDisplay(storedMatrixTransformations, vehicle, carNumber, scrollingDisplayIndexTracker, renderProperties, light);
 							} else {
-								renderDisplay(storedMatrixTransformations, vehicle);
+								renderDisplay(storedMatrixTransformations, vehicle, renderProperties, light);
 							}
 						}
 					}
@@ -370,7 +376,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 		graphicsHolder.pop();
 	}
 
-	private void renderLineColor(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, boolean fromResourcePackCreator) {
+	private void renderLineColor(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, boolean fromResourcePackCreator, ObjectIntImmutablePair<QueuedRenderLayer> renderProperties, int light) {
 		final int color;
 		if (fromResourcePackCreator) {
 			color = ARGB_BLACK | rainbowColor();
@@ -408,7 +414,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 		});
 	}
 
-	private void renderSevenSegmentDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle) {
+	private void renderSevenSegmentDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, ObjectIntImmutablePair<QueuedRenderLayer> renderProperties, int light) {
 		final String text = formatText(vehicle);
 		final HorizontalAlignment horizontalAlignment = getHorizontalAlignment(false);
 
@@ -442,7 +448,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 		});
 	}
 
-	private void renderScrollingDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, int carNumber, int[] scrollingDisplayIndexTracker) {
+	private void renderScrollingDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, int carNumber, int[] scrollingDisplayIndexTracker, ObjectIntImmutablePair<QueuedRenderLayer> renderProperties, int light) {
 		final String text = formatText(vehicle);
 		final ObjectArrayList<ScrollingText> scrollingTexts = vehicle.persistentVehicleData.getScrollingText(carNumber);
 
@@ -471,7 +477,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 		});
 	}
 
-	private void renderDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle) {
+	private void renderDisplay(StoredMatrixTransformations storedMatrixTransformations, VehicleExtension vehicle, ObjectIntImmutablePair<QueuedRenderLayer> renderProperties, int light) {
 		final String[] textSplit = formatText(vehicle).split("\\|");
 		final boolean[] isCjk = new boolean[textSplit.length];
 		final double[] textHeightScale = new double[textSplit.length];
