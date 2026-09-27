@@ -71,6 +71,10 @@
 		"displayTemplateText": {
 			"type": "string"
 		},
+		"displayRenderStage": {
+			"$ref": "RenderStage",
+			"typeScriptEnum": "LIGHT|ALWAYS_ON_LIGHT|INTERIOR|INTERIOR_TRANSLUCENT|EXTERIOR"
+		},
 		"doorXMultiplier": {
 			"type": "number"
 		},
@@ -120,6 +124,7 @@
 		"displayType",
 		"displayDefaultText",
 		"displayTemplateText",
+	    "displayRenderStage",
 		"doorXMultiplier",
 		"doorZMultiplier",
 		"doorAnimationType",
