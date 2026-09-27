@@ -24,6 +24,8 @@ public final class ModelProperties extends ModelPropertiesSchema {
 	@Nullable
 	public final Identifier gangwayOuterBottomTexture;
 	@Nullable
+	public final Identifier gangwayModel;
+	@Nullable
 	public final Identifier barrierInnerSideTexture;
 	@Nullable
 	public final Identifier barrierInnerTopTexture;
@@ -35,6 +37,8 @@ public final class ModelProperties extends ModelPropertiesSchema {
 	public final Identifier barrierOuterTopTexture;
 	@Nullable
 	public final Identifier barrierOuterBottomTexture;
+	@Nullable
+	public final Identifier barrierModel;
 
 	public ModelProperties(ReaderBase readerBase) {
 		super(readerBase);
@@ -45,28 +49,32 @@ public final class ModelProperties extends ModelPropertiesSchema {
 		gangwayOuterSideTexture = CustomResourceTools.formatIdentifier(gangwayOuterSideResource, "png");
 		gangwayOuterTopTexture = CustomResourceTools.formatIdentifier(gangwayOuterTopResource, "png");
 		gangwayOuterBottomTexture = CustomResourceTools.formatIdentifier(gangwayOuterBottomResource, "png");
+		gangwayModel = CustomResourceTools.formatIdentifier(gangwayModelResource, "obj");
 		barrierInnerSideTexture = CustomResourceTools.formatIdentifier(barrierInnerSideResource, "png");
 		barrierInnerTopTexture = CustomResourceTools.formatIdentifier(barrierInnerTopResource, "png");
 		barrierInnerBottomTexture = CustomResourceTools.formatIdentifier(barrierInnerBottomResource, "png");
 		barrierOuterSideTexture = CustomResourceTools.formatIdentifier(barrierOuterSideResource, "png");
 		barrierOuterTopTexture = CustomResourceTools.formatIdentifier(barrierOuterTopResource, "png");
 		barrierOuterBottomTexture = CustomResourceTools.formatIdentifier(barrierOuterBottomResource, "png");
+	    barrierModel = CustomResourceTools.formatIdentifier(barrierModelResource, "obj");
 	}
 
 	ModelProperties(double modelYOffset) {
-		super(modelYOffset, "", "", "", "", "", "", 0, 0, 0, 0, "", "", "", "", "", "", 0, 0, 0, 0);
+		super(modelYOffset, "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0);
 		gangwayInnerSideTexture = null;
 		gangwayInnerTopTexture = null;
 		gangwayInnerBottomTexture = null;
 		gangwayOuterSideTexture = null;
 		gangwayOuterTopTexture = null;
 		gangwayOuterBottomTexture = null;
+		gangwayModel = null;
 		barrierInnerSideTexture = null;
 		barrierInnerTopTexture = null;
 		barrierInnerBottomTexture = null;
 		barrierOuterSideTexture = null;
 		barrierOuterTopTexture = null;
 		barrierOuterBottomTexture = null;
+		barrierModel = null;
 	}
 
 	ModelProperties(
@@ -78,6 +86,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 			String gangwayOuterSideResource,
 			String gangwayOuterTopResource,
 			String gangwayOuterBottomResource,
+		    String gangwayModelResource,
+		    double gangwayModelWidth,
+		    double gangwayModelHeight,
+		    double gangwayModelDepth,
 			double gangwayWidth,
 			double gangwayHeight,
 			double gangwayYOffset,
@@ -88,6 +100,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 			String barrierOuterSideResource,
 			String barrierOuterTopResource,
 			String barrierOuterBottomResource,
+		    String barrierModelResource,
+		    double barrierModelWidth,
+		    double barrierModelHeight,
+		    double barrierModelDepth,
 			double barrierWidth,
 			double barrierHeight,
 			double barrierYOffset,
@@ -101,6 +117,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 				gangwayOuterSideResource,
 				gangwayOuterTopResource,
 				gangwayOuterBottomResource,
+			    gangwayModelResource,
+			    gangwayModelWidth,
+			    gangwayModelHeight,
+			    gangwayModelDepth,
 				gangwayWidth,
 				gangwayHeight,
 				gangwayYOffset,
@@ -111,6 +131,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 				barrierOuterSideResource,
 				barrierOuterTopResource,
 				barrierOuterBottomResource,
+			    barrierModelResource,
+			    barrierModelWidth,
+                barrierModelHeight,
+			    barrierModelDepth,
 				barrierWidth,
 				barrierHeight,
 				barrierYOffset,
@@ -123,12 +147,14 @@ public final class ModelProperties extends ModelPropertiesSchema {
 		gangwayOuterSideTexture = CustomResourceTools.formatIdentifier(gangwayOuterSideResource, "png");
 		gangwayOuterTopTexture = CustomResourceTools.formatIdentifier(gangwayOuterTopResource, "png");
 		gangwayOuterBottomTexture = CustomResourceTools.formatIdentifier(gangwayOuterBottomResource, "png");
+		gangwayModel = CustomResourceTools.formatIdentifier(gangwayModelResource, "obj");
 		barrierInnerSideTexture = CustomResourceTools.formatIdentifier(barrierInnerSideResource, "png");
 		barrierInnerTopTexture = CustomResourceTools.formatIdentifier(barrierInnerTopResource, "png");
 		barrierInnerBottomTexture = CustomResourceTools.formatIdentifier(barrierInnerBottomResource, "png");
 		barrierOuterSideTexture = CustomResourceTools.formatIdentifier(barrierOuterSideResource, "png");
 		barrierOuterTopTexture = CustomResourceTools.formatIdentifier(barrierOuterTopResource, "png");
 		barrierOuterBottomTexture = CustomResourceTools.formatIdentifier(barrierOuterBottomResource, "png");
+		barrierModel = CustomResourceTools.formatIdentifier(barrierModelResource, "obj");
 	}
 
 	public void iterateParts(Consumer<ModelPropertiesPart> consumer) {
@@ -137,6 +163,18 @@ public final class ModelProperties extends ModelPropertiesSchema {
 
 	public double getModelYOffset() {
 		return modelYOffset;
+	}
+
+	public double getGangwayModelWidth() {
+		return gangwayModelWidth;
+	}
+
+	public double getGangwayModelHeight() {
+		return gangwayModelHeight;
+	}
+
+	public double getGangwayModelDepth() {
+		return gangwayModelDepth;
 	}
 
 	public double getGangwayWidth() {
@@ -153,6 +191,18 @@ public final class ModelProperties extends ModelPropertiesSchema {
 
 	public double getGangwayZOffset() {
 		return gangwayZOffset;
+	}
+
+	public double getBarrierModelWidth() {
+		return barrierModelWidth;
+	}
+
+	public double getBarrierModelHeight() {
+		return barrierModelHeight;
+	}
+
+	public double getBarrierModelDepth() {
+		return barrierModelDepth;
 	}
 
 	public double getBarrierWidth() {
@@ -186,6 +236,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 				gangwayOuterSideResource,
 				gangwayOuterTopResource,
 				gangwayOuterBottomResource,
+			    gangwayModelResource,
+			    gangwayModelWidth,
+			    gangwayModelHeight,
+			    gangwayModelDepth,
 				gangwayWidth,
 				gangwayHeight,
 				gangwayYOffset,
@@ -196,6 +250,10 @@ public final class ModelProperties extends ModelPropertiesSchema {
 				barrierOuterSideResource,
 				barrierOuterTopResource,
 				barrierOuterBottomResource,
+			    barrierModelResource,
+			    barrierModelWidth,
+			    barrierModelHeight,
+			    barrierModelDepth,
 				barrierWidth,
 				barrierHeight,
 				barrierYOffset,
