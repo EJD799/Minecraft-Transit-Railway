@@ -231,7 +231,8 @@ public class RenderVehicles implements IGui {
 							}
 
 							// Render gangway
-							renderConnection(
+							if (model.modelProperties.gangwayModel == null) {
+							    renderConnection(
 									vehicleResource.hasGangway1(),
 									vehicleResource.hasGangway2(),
 									true,
@@ -251,10 +252,32 @@ public class RenderVehicles implements IGui {
 									model.modelProperties.getGangwayZOffset(),
 									oscillationAmount,
 									vehicle.getIsOnRoute()
-							);
+							    );
+							} else {
+                                renderOBJConnection(
+									vehicleResource.hasGangway1(),
+									vehicleResource.hasGangway2(),
+									true,
+									previousGangwayPositionsList.get(modelIndex),
+									model.modelProperties.gangwayModel,
+									model.modelProperties.getGangwayModelWidth(),
+									model.modelProperties.getGangwayModelHeight(),
+									model.modelProperties.getGangwayModelDepth(),
+									vehicleCarRenderingPositionAndRotation,
+									offsetVector == null,
+									vehicleCarDetails.left().getLength(),
+									model.modelProperties.getGangwayWidth(),
+									model.modelProperties.getGangwayHeight(),
+									model.modelProperties.getGangwayYOffset(),
+									model.modelProperties.getGangwayZOffset(),
+									oscillationAmount,
+									vehicle.getIsOnRoute()
+							    );
+							}
 
 							// Render barrier
-							renderConnection(
+                            if (model.modelProperties.barrierModel == null) {
+							    renderConnection(
 									vehicleResource.hasBarrier1(),
 									vehicleResource.hasBarrier2(),
 									false,
@@ -274,7 +297,28 @@ public class RenderVehicles implements IGui {
 									model.modelProperties.getBarrierZOffset(),
 									oscillationAmount,
 									vehicle.getIsOnRoute()
-							);
+							    );
+							} else {
+                                renderOBJConnection(
+									vehicleResource.hasBarrier1(),
+									vehicleResource.hasBarrier2(),
+									false,
+									previousBarrierPositionsList.get(modelIndex),
+									model.modelProperties.barrierModel,
+									model.modelProperties.getBarrierModelWidth(),
+									model.modelProperties.getBarrierModelHeight(),
+									model.modelProperties.getBarrierModelDepth(),
+									vehicleCarRenderingPositionAndRotation,
+									offsetVector == null,
+									vehicleCarDetails.left().getLength(),
+									model.modelProperties.getBarrierWidth(),
+									model.modelProperties.getBarrierHeight(),
+									model.modelProperties.getBarrierYOffset(),
+									model.modelProperties.getBarrierZOffset(),
+									oscillationAmount,
+									vehicle.getIsOnRoute()
+							    );
+							}
 						});
 
 						// If the vehicle has gangways, add extra floors to define where the gangways are
@@ -572,6 +616,18 @@ public class RenderVehicles implements IGui {
 			previousConnectionPositions.position3 = null;
 			previousConnectionPositions.position4 = null;
 		}
+	}
+
+	private static void renderOBJConnection(
+			boolean shouldRender1, boolean shouldRender2, boolean canHaveLight, PreviousConnectionPositions previousConnectionPositions,
+			@Nullable Identifier model,
+		    double modelWidth,
+		    double modelHeight,
+		    double modelDepth,
+			PositionAndRotation positionAndRotation, boolean useOffset,
+			double vehicleLength, double width, double height, double yOffset, double zOffset, double oscillationAmount, boolean isOnRoute
+	) {
+
 	}
 
 	private static void drawTexture(GraphicsHolder graphicsHolder, Vector position1, Vector position2, Vector position3, Vector position4, Vector3d offset, int light) {
