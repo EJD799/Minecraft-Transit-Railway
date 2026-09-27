@@ -61,6 +61,7 @@ export class EditVehicleModelPartDialog {
 			displayType: new FormControl(modelPropertiesPart.displayType),
 			displayDefaultText: new FormControl(modelPropertiesPart.displayDefaultText),
 			displayTemplateText: new FormControl(modelPropertiesPart.displayTemplateText),
+			displayRenderStage: new FormControl(modelPropertiesPart.displayRenderStage),
 			doorXMultiplier: new FormControl(modelPropertiesPart.doorXMultiplier),
 			doorZMultiplier: new FormControl(modelPropertiesPart.doorZMultiplier),
 			doorAnimationType: new FormControl(modelPropertiesPart.doorAnimationType),
@@ -110,6 +111,7 @@ export class EditVehicleModelPartDialog {
 			modelPropertiesPart.displayType = newData.displayType ?? defaultModelPropertiesPart.displayType;
 			modelPropertiesPart.displayDefaultText = newData.displayDefaultText ?? defaultModelPropertiesPart.displayDefaultText;
 			modelPropertiesPart.displayTemplateText = newData.displayTemplateText ?? defaultModelPropertiesPart.displayTemplateText;
+			modelPropertiesPart.displayRenderStage = newData.displayRenderStage ?? defaultModelPropertiesPart.displayRenderStage;
 			modelPropertiesPart.doorXMultiplier = newData.doorXMultiplier ?? defaultModelPropertiesPart.doorXMultiplier;
 			modelPropertiesPart.doorZMultiplier = newData.doorZMultiplier ?? defaultModelPropertiesPart.doorZMultiplier;
 			modelPropertiesPart.doorAnimationType = newData.doorAnimationType ?? defaultModelPropertiesPart.doorAnimationType;
