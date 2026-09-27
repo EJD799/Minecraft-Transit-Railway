@@ -281,6 +281,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				displayType,
 				displayDefaultText,
 			    displayTemplateText,
+			    displayRenderStage,
 				doorXMultiplier,
 				doorZMultiplier,
 				doorAnimationType,
@@ -402,7 +403,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 							(displayPart.width - (float) displayXPadding * 2) / 16,
 							(displayPart.height - (float) displayYPadding * 2) / 16,
 							0, 0, 1, 1, Direction.UP,
-							color, GraphicsHolder.getDefaultLight()
+							color, renderProperties.rightInt()
 					);
 					graphicsHolder.pop();
 				}));
@@ -436,7 +437,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 							0, 0,
 							(displayPart.height - (float) displayYPadding * 2) / 16,
 							horizontalAlignment,
-							ARGB_BLACK | displayColorInt, GraphicsHolder.getDefaultLight()
+							ARGB_BLACK | displayColorInt, renderProperties.rightInt()
 					);
 					graphicsHolder.pop();
 				}));
@@ -470,7 +471,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 					scrollingTexts.add(new ScrollingText(width, height, 4, height < 0.1));
 				}
 
-				scrollingTexts.get(scrollingDisplayIndexTracker[0]).changeImage(text.isEmpty() ? null : DynamicTextureCache.instance.getPixelatedText(text, ARGB_BLACK | displayColorInt, Integer.MAX_VALUE, displayCjkSizeRatio, height < 0.1));
+				scrollingTexts.get(scrollingDisplayIndexTracker[0]).changeImage(text.isEmpty() ? null : DynamicTextureCache.instance.getPixelatedText(text, ARGB_BLACK | displayColorInt, renderProperties.rightInt(), displayCjkSizeRatio, height < 0.1));
 				scrollingTexts.get(scrollingDisplayIndexTracker[0]).scrollText(storedMatrixTransformations2);
 				scrollingDisplayIndexTracker[0]++;
 			}));
@@ -512,7 +513,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 						graphicsHolder.push();
 						graphicsHolder.translate(Math.max(0, horizontalAlignment.getOffset(0, (float) (textWidth - availableTextWidth))), 0, 0);
 						graphicsHolder.scale((float) (Math.min(1, availableTextWidth / textWidth) * newTextScale), (float) newTextScale, 1);
-						graphicsHolder.drawText(mutableText, 0, 0, isCjk[i] ? displayColorCjkInt : displayColorInt, false, GraphicsHolder.getDefaultLight());
+						graphicsHolder.drawText(mutableText, 0, 0, isCjk[i] ? displayColorCjkInt : displayColorInt, false, renderProperties.rightInt());
 						graphicsHolder.pop();
 						graphicsHolder.translate(0, newTextScale * (TEXT_HEIGHT + LINE_PADDING), 0);
 					}
