@@ -32,7 +32,7 @@
 		"gangwayOuterBottomResource": {
 			"type": "string"
 		},
-		"gangwayModel": {
+		"gangwayModelResource": {
 			"type": "string"
 		},
 		"gangwayModelWidth": {
@@ -79,7 +79,7 @@
 		"barrierOuterBottomResource": {
 			"type": "string"
 		},
-		"barrierModel": {
+		"barrierModelResource": {
 			"type": "string"
 		},
 		"barrierModelWidth": {
@@ -117,7 +117,7 @@
 		"gangwayOuterSideResource",
 		"gangwayOuterTopResource",
 		"gangwayOuterBottomResource",
-		"gangwayModel",
+		"gangwayModelResource",
 		"gangwayModelWidth",
 		"gangwayModelHeight",
 		"gangwayModelDepth",
@@ -131,7 +131,7 @@
 		"barrierOuterSideResource",
 		"barrierOuterTopResource",
 		"barrierOuterBottomResource",
-		"barrierModel",
+		"barrierModelResource",
 		"barrierModelWidth",
 		"barrierModelHeight",
 		"barrierModelDepth",
