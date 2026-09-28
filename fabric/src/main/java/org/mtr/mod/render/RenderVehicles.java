@@ -619,15 +619,100 @@ public class RenderVehicles implements IGui {
 	}
 
 	private static void renderOBJConnection(
-			boolean shouldRender1, boolean shouldRender2, boolean canHaveLight, PreviousConnectionPositions previousConnectionPositions,
-			@Nullable Identifier model,
-		    double modelWidth,
-		    double modelHeight,
-		    double modelDepth,
-			PositionAndRotation positionAndRotation, boolean useOffset,
-			double vehicleLength, double width, double height, double yOffset, double zOffset, double oscillationAmount, boolean isOnRoute
+			boolean shouldRender1,
+			boolean shouldRender2,
+			boolean canHaveLight,
+			PreviousConnectionPositions previousConnectionPositions,
+			@Nullable OptimizedModel.ObjModel model,
+			double modelWidth,
+			double modelHeight,
+			double modelDepth,
+			PositionAndRotation positionAndRotation,
+			boolean useOffset,
+			double vehicleLength,
+			double width,
+			double height,
+			double yOffset,
+			double zOffset,
+			double oscillationAmount,
+			boolean isOnRoute
 	) {
+		if (model == null || !previousConnectionPositions.isValid()) {
+			return;
+		}
 
+		final double halfLength = vehicleLength / 2;
+		final double newOscillationAmount = -Math.toRadians(oscillationAmount);
+
+		final Vector position1 = positionAndRotation.transformForwards(
+				new Vector(
+						-width / 2,
+						yOffset + SMALL_OFFSET,
+						zOffset - halfLength
+				).rotateZ(newOscillationAmount),
+				Vector::rotateX,
+				Vector::rotateY,
+				Vector::add
+		);
+
+		final Vector position4 = positionAndRotation.transformForwards(
+				new Vector(
+						width / 2,
+						yOffset + SMALL_OFFSET,
+						zOffset - halfLength
+				).rotateZ(newOscillationAmount),
+				Vector::rotateX,
+				Vector::rotateY,
+				Vector::add
+		);
+
+		final double leftDistance =
+				position1.distance(previousConnectionPositions.position4);
+
+		final double rightDistance =
+				position4.distance(previousConnectionPositions.position1);
+
+		final double deformation =
+				modelDepth != 0
+						? (rightDistance - leftDistance) / (2 * modelDepth)
+						: 0;
+
+		/*
+		* The OBJ's native dimensions are used by createConnectionModel()
+		* to determine its center and width.
+		*
+		* The connection model is centered between the two vehicles.
+		*/
+
+		final Vector leftCenter = position1;
+		final Vector rightCenter = position4;
+
+		final double centerX =
+				(leftCenter.getX() + rightCenter.getX()) / 2;
+
+		final double centerY =
+				(leftCenter.getY() + rightCenter.getY()) / 2;
+
+		final double centerZ =
+				(leftCenter.getZ() + rightCenter.getZ()) / 2;
+
+		final OptimizedModel connectionModel =
+				model.createConnectionModel(
+						OptimizedModel.ShaderType.EXTERIOR,
+						centerX,
+						centerY,
+						centerZ,
+						false,
+						deformation
+				);
+
+		final OptimizedModelWrapper connectionModelWrapper =
+				OptimizedModelWrapper.fromConnectionModel(connectionModel);
+
+		/*
+		* Queue connectionModelWrapper here using the same optimized-renderer
+		* path used by the normal OBJ vehicle models.
+		*/
 	}
 
 	private static void drawTexture(GraphicsHolder graphicsHolder, Vector position1, Vector position2, Vector position3, Vector position4, Vector3d offset, int light) {

@@ -4,13 +4,16 @@ import org.mtr.core.serializer.JsonReader;
 import org.mtr.core.serializer.ReaderBase;
 import org.mtr.core.tool.Utilities;
 import org.mtr.libraries.com.google.gson.JsonObject;
+import org.mtr.libraries.it.unimi.dsi.fastutil.objects.Object2ObjectAVLTreeMap;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArraySet;
 import org.mtr.mapping.holder.Identifier;
+import org.mtr.mapping.mapper.OptimizedModel;
 import org.mtr.mod.Init;
 import org.mtr.mod.client.CustomResourceLoader;
 import org.mtr.mod.generated.resource.VehicleModelSchema;
 import org.mtr.mod.render.DynamicVehicleModel;
+import javax.annotation.Nullable;
 
 public final class VehicleModel extends VehicleModelSchema {
 
@@ -113,18 +116,70 @@ public final class VehicleModel extends VehicleModelSchema {
 
 	private DynamicVehicleModel createModel(ModelProperties modelProperties, PositionDefinitions positionDefinitions, String id) {
 		final Identifier textureId = CustomResourceTools.formatIdentifierWithDefault(textureResource, "png");
+
+		@Nullable OptimizedModel.ObjModel gangwayModel = null;
+		@Nullable OptimizedModel.ObjModel barrierModel = null;
+
 		CustomResourceLoader.OPTIMIZED_RENDERER_WRAPPER.beginReload();
 		try {
+			if (modelProperties.gangwayModel != null) {
+				try {
+					final Object2ObjectAVLTreeMap<String, OptimizedModel.ObjModel> gangwayModels =
+							ModelResourceLoader.loadModel(
+									modelProperties.gangwayModel.data.toString(),
+									textureId,
+									flipTextureV,
+									resourceProvider
+							);
+
+					if (!gangwayModels.isEmpty()) {
+						gangwayModel = gangwayModels.values().iterator().next();
+					}
+				} catch (Exception e) {
+					Init.LOGGER.warn(
+							"[{}] Failed to load gangway model [{}]",
+							id,
+							modelProperties.gangwayModel,
+							e
+					);
+				}
+			}
+
+			if (modelProperties.barrierModel != null) {
+				try {
+					final Object2ObjectAVLTreeMap<String, OptimizedModel.ObjModel> barrierModels =
+							ModelResourceLoader.loadModel(
+									modelProperties.barrierModel.data.toString(),
+									textureId,
+									flipTextureV,
+									resourceProvider
+							);
+
+					if (!barrierModels.isEmpty()) {
+						barrierModel = barrierModels.values().iterator().next();
+					}
+				} catch (Exception e) {
+					Init.LOGGER.warn(
+							"[{}] Failed to load barrier model [{}]",
+							id,
+							modelProperties.barrierModel,
+							e
+					);
+				}
+			}
+
 			if (modelResource.endsWith(".bbmodel")) {
 				return new DynamicVehicleModel(
 						new BlockbenchModel(new JsonReader(Utilities.parseJson(resourceProvider.get(CustomResourceTools.formatIdentifierWithDefault(modelResource, "bbmodel"))))),
 						textureId,
 						modelProperties,
 						positionDefinitions,
-						id
+						id,
+						gangwayModel,
+						barrierModel
 				);
 			} else if (ModelResourceLoader.isSupportedModelResource(modelResource)) {
-				return new DynamicVehicleModel(ModelResourceLoader.loadModel(modelResource, textureId, flipTextureV, resourceProvider), textureId, modelProperties, positionDefinitions, id);
+				return new DynamicVehicleModel(ModelResourceLoader.loadModel(modelResource, textureId, flipTextureV, resourceProvider), textureId, modelProperties, positionDefinitions, id, gangwayModel, barrierModel);
 			} else {
 				Init.LOGGER.error("[{}] Invalid model!", modelResource);
 				return new DynamicVehicleModel(
@@ -132,7 +187,9 @@ public final class VehicleModel extends VehicleModelSchema {
 						textureId,
 						modelProperties,
 						positionDefinitions,
-						id
+						id,
+						gangwayModel,
+						barrierModel
 				);
 			}
 		} catch (Exception e) {
@@ -142,7 +199,9 @@ public final class VehicleModel extends VehicleModelSchema {
 					textureId,
 					modelProperties,
 					positionDefinitions,
-					id
+					id,
+					gangwayModel,
+					barrierModel
 			);
 		} finally {
 			CustomResourceLoader.OPTIMIZED_RENDERER_WRAPPER.finishReload();
