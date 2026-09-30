@@ -361,7 +361,7 @@
 			"type": "DISPLAY",
 			"displayXPadding": 0.4,
 			"displayYPadding": 0.8,
-			"displayColor": "FFFFFF",
+			"displayColor": "ROUTE_COLOR",
 			"displayOptions": [
 				"ALIGN_LEFT",
 				"CYCLE_LANGUAGES"
@@ -396,12 +396,106 @@
 			"type": "DISPLAY",
 			"displayXPadding": 0.4,
 			"displayYPadding": 0.8,
-			"displayColor": "FFFFFF",
+			"displayColor": "ROUTE_COLOR",
 			"displayOptions": [
 				"ALIGN_LEFT",
 				"CYCLE_LANGUAGES"
 			],
 			"displayType": "ROUTE_NUMBER"
+		},
+		{
+			"names": [
+				"lcd_base"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"renderStage": "INTERIOR"
+		},
+		{
+			"names": [
+				"lcd_light"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
+				"lcd_next_station"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.25,
+			"displayYPadding": 0,
+			"displayColor": "000000",
+			"displayOptions": [
+				"ALIGN_LEFT",
+				"CYCLE_LANGUAGES"
+			],
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "Nicht Einsteigen"
+		},
+		{
+			"names": [
+				"lcd_route_color_circle"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.025,
+			"displayYPadding": 0.275,
+			"displayOptions": [],
+			"displayType": "ROUTE_COLOR_ROUNDED"
+		},
+		{
+			"names": [
+				"lcd_route_number"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.125,
+			"displayYPadding": 0.375,
+			"displayColor": "FFFFFF",
+			"displayOptions": [],
+			"displayType": "ROUTE_NUMBER"
+		},
+		{
+			"names": [
+				"lcd_destination"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.0875,
+			"displayYPadding": 0.275,
+			"displayColor": "FFFFFF",
+			"displayOptions": [
+				"ALIGN_LEFT",
+				"CYCLE_LANGUAGES"
+			],
+			"displayType": "DESTINATION",
+			"displayDefaultText": "Nicht Einsteigen"
+		},
+		{
+			"names": [
+				"lcd_route_color_rectangle"
+			],
+			"positionDefinitions": [
+				"lcd"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.225,
+			"displayYPadding": 0.4625,
+			"displayOptions": [],
+			"displayType": "ROUTE_COLOR"
 		}
 	],
 	"modelYOffset": 1,

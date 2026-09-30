@@ -47,6 +47,47 @@
 				"end1"
 			],
 			"renderStage": "EXTERIOR"
+		},
+		{
+			"names": [
+				"lcd_end_light"
+			],
+			"positionDefinitions": [
+				"end1"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
+				"lcd_end_cjk"
+			],
+			"positionDefinitions": [
+				"end1"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.15,
+			"displayYPadding": 0.15,
+			"displayColor": "000000",
+			"displayOptions": [],
+			"displayCjkSizeRatio": 999999,
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "回廠"
+		},
+		{
+			"names": [
+				"lcd_end_english"
+			],
+			"positionDefinitions": [
+				"end1"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.15,
+			"displayYPadding": 0.15,
+			"displayColor": "000000",
+			"displayOptions": [],
+			"displayCjkSizeRatio": 0,
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "Depot"
 		}
 	],
 	"modelYOffset": 1

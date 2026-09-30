@@ -93,7 +93,7 @@
 		},
 		{
 			"names": [
-				"roof_c1141a",
+				"roof_door_c1141a",
 				"door"
 			],
 			"positionDefinitions": [
@@ -101,6 +101,33 @@
 				"doorFlipped"
 			],
 			"renderStage": "INTERIOR"
+		},
+		{
+			"names": [
+				"lcd_light_c1141a"
+			],
+			"positionDefinitions": [
+				"door",
+				"doorFlipped"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
+				"lcd_next_station_c1141a"
+			],
+			"positionDefinitions": [
+				"door",
+				"doorFlipped"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0,
+			"displayYPadding": 0.375,
+			"displayColor": "000000",
+			"displayOptions": [],
+			"displayCjkSizeRatio": 2,
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "回廠|Depot"
 		},
 		{
 			"names": [

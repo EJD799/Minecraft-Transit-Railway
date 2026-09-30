@@ -182,10 +182,10 @@
 				"2fb8e35"
 			],
 			"type": "DISPLAY",
-			"displayXPadding": 0.4,
-			"displayYPadding": 0.6,
-			"displayColorCjk": "FFFFFF",
-			"displayColor": "FFFFFF",
+			"displayXPadding": 0.25,
+			"displayYPadding": 0,
+			"displayColorCjk": "000000",
+			"displayColor": "000000",
 			"displayOptions": [
 				"SINGLE_LINE",
 				"SCROLL_NORMAL"
@@ -195,22 +195,49 @@
 		},
 		{
 			"names": [
+				"interior_display_light"
+			],
+			"positionDefinitions": [
+				"2fb8e35"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
 				"side_display"
 			],
 			"positionDefinitions": [
-				"b801b276"
+				"c01b90e7"
 			],
 			"type": "DISPLAY",
-			"displayXPadding": 1.0,
-			"displayYPadding": 0.5,
+			"displayXPadding": 0.25,
+			"displayYPadding": 0.375,
 			"displayColorCjk": "FF9900",
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SINGLE_LINE",
-				"SCROLL_NORMAL"
+				"ALIGN_LEFT"
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Not In Service"
+		},
+		{
+			"names": [
+				"side_display_departure_index"
+			],
+			"positionDefinitions": [
+				"c01b90e7"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.125,
+			"displayYPadding": 0.125,
+			"displayColorCjk": "FF9900",
+			"displayColor": "FF9900",
+			"displayOptions": [
+				"ALIGN_RIGHT"
+			],
+			"displayType": "DEPARTURE_INDEX",
+			"displayDefaultText": "000",
+			"displayPadZeros": 3
 		},
 		{
 			"names": [
