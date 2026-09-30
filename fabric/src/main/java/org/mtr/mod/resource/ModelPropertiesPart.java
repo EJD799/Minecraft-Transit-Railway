@@ -38,8 +38,9 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 	public ModelPropertiesPart(ReaderBase readerBase) {
 		super(readerBase);
 		updateData(readerBase);
-		displayColorInt = parseColor(displayColor, 0xFF9900);
-		displayColorCjkInt = parseColor(displayColorCjk, displayColorInt);
+
+		displayColorInt = 0;
+		displayColorCjkInt = 0;
 	}
 
 	ModelPropertiesPart(ObjectSet<String> names) {
@@ -106,8 +107,44 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 		this.names.addAll(names);
 		this.positionDefinitions.addAll(positionDefinitions);
 		this.displayOptions.addAll(displayOptions);
-		displayColorInt = parseColor(displayColor, 0xFF9900);
-		displayColorCjkInt = parseColor(displayColorCjk, displayColorInt);
+		displayColorInt = 0;
+		displayColorCjkInt = 0;
+	}
+
+	public static int getContrastColor(int color) {
+		int red = (color >> 16) & 0xFF;
+		int green = (color >> 8) & 0xFF;
+		int blue = color & 0xFF;
+
+		// Perceived brightness (ITU-R BT.601)
+		int brightness = (299 * red + 587 * green + 114 * blue) / 1000;
+
+		return brightness >= 180 ? 0x000000 : 0xFFFFFF;
+	}
+
+	public void setupDisplayColor() {
+		final int routeColor;
+		if (fromResourcePackCreator) {
+			routeColor = ARGB_BLACK | rainbowColor();
+		} else {
+			routeColor = getOrDefault(ARGB_BLACK | vehicle.vehicleExtraData.getThisRouteColor(), ARGB_BLACK | vehicle.vehicleExtraData.getNextRouteColor(), ARGB_BLACK | vehicle.vehicleExtraData.getPreviousRouteColor(), 0, vehicle);
+		}
+
+		if (displayColor == "ROUTE_COLOR") {
+			displayColorInt = routeColor;
+		} else if (displayColor == "CONTRAST_COLOR") {
+			displayColorInt = getContrastColor(routeColor);
+		} else {
+			displayColorInt = parseColor(displayColor, 0xFF9900);
+		}
+
+		if (displayColorCjk == "ROUTE_COLOR") {
+			displayColorCjkInt = routeColor;
+		} else if (displayColorCjk == "CONTRAST_COLOR") {
+			displayColorCjkInt = getContrastColor(routeColor);
+		} else {
+			displayColorCjkInt = parseColor(displayColorCjk, displayColorInt);
+		}
 	}
 
 	/**
@@ -210,6 +247,8 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 	}
 
 	public void render(Identifier texture, StoredMatrixTransformations storedMatrixTransformations, @Nullable VehicleExtension vehicle, int carNumber, int[] scrollingDisplayIndexTracker, int light, ObjectArrayList<ObjectDoubleImmutablePair<Box>> openDoorways, boolean fromResourcePackCreator) {
+		setupDisplayColor(vehicle);
+
 		if (vehicle == null || VehicleResource.matchesCondition(vehicle, condition, openDoorways.isEmpty())) {
 			switch (type) {
 				case NORMAL:

@@ -914,19 +914,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -984,19 +984,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1054,19 +1054,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1124,19 +1124,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1194,19 +1194,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1264,19 +1264,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1334,19 +1334,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1404,19 +1404,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_tcl.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1474,19 +1474,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1544,19 +1544,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1614,19 +1614,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_end_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",
@@ -1684,19 +1684,19 @@
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_common.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_1.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/k_train.bbmodel",
 					"textureResource": "mtr:textures/vehicle/k_train_ael.png",
 					"modelPropertiesResource": "mtr:properties/vehicle/k_train_tcl_ael_head_2.json",
-					"positionDefinitionsResource": "mtr:properties/definition/urban_line@definition@_base.json"
+					"positionDefinitionsResource": "mtr:properties/definition/k_train@definition@.json"
 				},
 				{
 					"modelResource": "mtr:models/vehicle/door_overlay.bbmodel",

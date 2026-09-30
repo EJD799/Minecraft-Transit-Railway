@@ -7,6 +7,8 @@
 			"positionDefinitions": [
 				"window",
 				"windowFlipped",
+				"window2",
+				"window2Flipped",
 				"windowEnd1",
 				"windowEnd2",
 				"windowEnd1Flipped",
@@ -25,6 +27,8 @@
 			"positionDefinitions": [
 				"window",
 				"windowFlipped",
+				"window2",
+				"window2Flipped",
 				"windowEnd1",
 				"windowEnd2",
 				"windowEnd1Flipped",
@@ -34,11 +38,75 @@
 		},
 		{
 			"names": [
+				"window",
+				"window_handrails"
+			],
+			"positionDefinitions": [
+				"window",
+				"windowFlipped",
+				"window2",
+				"window2Flipped",
+				"windowEnd1",
+				"windowEnd2",
+				"windowEnd1Flipped",
+				"windowEnd2Flipped"
+			],
+			"renderStage": "INTERIOR"
+		},
+		{
+			"names": [
+				"roof_window"
+			],
+			"positionDefinitions": [
+				"window",
+				"windowFlipped",
+				"windowEnd1",
+				"windowEnd1Flipped"
+			],
+			"renderStage": "INTERIOR"
+		},
+		{
+			"names": [
+				"roof_window_2"
+			],
+			"positionDefinitions": [
+				"window2",
+				"window2Flipped",
+				"windowEnd2",
+				"windowEnd2Flipped"
+			],
+			"renderStage": "INTERIOR"
+		},
+		{
+			"names": [
+				"interior_display"
+			],
+			"positionDefinitions": [
+				"window2",
+				"window2Flipped",
+				"windowEnd2",
+				"windowEnd2Flipped"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0,
+			"displayYPadding": 0.25,
+			"displayColor": "FF9900",
+			"displayOptions": [
+				"SINGLE_LINE",
+				"SCROLL_NORMAL"
+			],
+			"displayType": "NEXT_STATION_MTR",
+			"displayDefaultText": "回廠|Depot"
+		},
+		{
+			"names": [
 				"window_floor"
 			],
 			"positionDefinitions": [
 				"window",
 				"windowFlipped",
+				"window2",
+				"window2Flipped",
 				"windowEnd1",
 				"windowEnd2",
 				"windowEnd1Flipped",
@@ -71,6 +139,8 @@
 			"positionDefinitions": [
 				"window",
 				"windowFlipped",
+				"window2",
+				"window2Flipped",
 				"windowEnd1",
 				"windowEnd2",
 				"windowEnd1Flipped",
@@ -91,6 +161,8 @@
 			"positionDefinitions": [
 				"window",
 				"windowFlipped",
+				"window2",
+				"window2Flipped",
 				"windowEnd1",
 				"windowEnd2",
 				"windowEnd1Flipped",
