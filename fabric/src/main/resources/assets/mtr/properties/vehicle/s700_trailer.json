@@ -66,13 +66,13 @@
 		},
 		{
 			"names": [
-				"interior_display_2"
+				"interior_side_display"
 			],
 			"positionDefinitions": [
 				"7db045ae"
 			],
 			"type": "DISPLAY",
-			"displayXPadding": 0.2,
+			"displayXPadding": 0.575,
 			"displayYPadding": 0.3,
 			"displayColorCjk": "FF9900",
 			"displayColor": "FF9900",
@@ -84,18 +84,6 @@
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Sound Transit"
-		},
-		{
-			"names": [
-				"interior_route_color_display"
-			],
-			"positionDefinitions": [
-				"bcf3e741"
-			],
-			"type": "DISPLAY",
-			"displayXPadding": 0.3,
-			"displayYPadding": 0.3,
-			"displayType": "ROUTE_COLOR"
 		},
 		{
 			"names": [

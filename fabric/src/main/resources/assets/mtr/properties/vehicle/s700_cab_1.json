@@ -47,6 +47,15 @@
 		},
 		{
 			"names": [
+				"lcd_light"
+			],
+			"positionDefinitions": [
+				"e5a59b50"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
 				"door"
 			],
 			"positionDefinitions": [
@@ -396,23 +405,35 @@
 		},
 		{
 			"names": [
-				"interior_display_1"
+				"lcd_display_1"
 			],
 			"positionDefinitions": [
 				"9bbe6e18"
 			],
 			"type": "DISPLAY",
 			"displayXPadding": 0.5,
-			"displayYPadding": 0.0,
+			"displayYPadding": 0.5,
+			"displayColorCjk": "000000",
+			"displayColor": "000000",
+			"displayOptions": [],
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "Not In Service"
+		},
+		{
+			"names": [
+				"lcd_display_2"
+			],
+			"positionDefinitions": [
+				"9bbe6e18"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.2,
+			"displayYPadding": 0.2,
 			"displayColorCjk": "FFFFFF",
 			"displayColor": "FFFFFF",
-			"displayMaxLineHeight": 0.5,
-			"displayCjkSizeRatio": 1.0,
-			"displayOptions": [
-				"SINGLE_LINE",
-				"SCROLL_NORMAL"
-			],
-			"displayType": "NEXT_STATION_UK",
+			"displayOptions": [],
+			"displayType": "TEMPLATE",
+			"displayTemplateText": "This is the %ROUTE_NAME% to|%DESTINATION%|Next stop|%NEXT_STATION%",
 			"displayDefaultText": ""
 		},
 		{
