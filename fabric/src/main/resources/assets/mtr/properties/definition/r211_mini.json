@@ -11,7 +11,7 @@
 			]
 		},
 		{
-			"name": "window2",
+			"name": "window3b",
 			"positions": [
 				{
 					"z": 0
@@ -21,6 +21,24 @@
 				{
 					"z": 0
 				}
+			]
+		},
+		{
+			"name": "windowDisplay",
+			"positions": [
+				{
+					"z": 0
+				}
+			],
+			"positionsFlipped": [
+				{
+					"z": 0
+				}
+			]
+		},
+		{
+			"name": "window2",
+			"positions": [
 			]
 		},
 		{
