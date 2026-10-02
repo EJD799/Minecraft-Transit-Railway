@@ -171,12 +171,33 @@
 				<div class="row gap">
 					<mat-form-field subscriptSizing="dynamic">
 						<mat-label>Colour (CJK Text)</mat-label>
-						<input matInput type="color" aria-label="Colour (CJK Text)" formControlName="displayColorCjk"/>
+						<mat-select formControlName="displayColorCjk">
+							<mat-option value="CUSTOM">Custom</mat-option>
+							<mat-option value="ROUTE_COLOR">Route Colour</mat-option>
+							<mat-option value="CONTRAST_COLOR">Contrast Colour</mat-option>
+						</mat-select>
 					</mat-form-field>
+					@if (hasCustomDisplayColorCjk()) {
+						<mat-form-field subscriptSizing="dynamic">
+							<mat-label>Custom Colour (CJK Text)</mat-label>
+							<input matInput type="color" aria-label="Colour (CJK Text)" formControlName="displayColorCjkCustom"/>
+						</mat-form-field>
+					}
+
 					<mat-form-field subscriptSizing="dynamic">
 						<mat-label>Colour (Non-CJK Text)</mat-label>
-						<input matInput type="color" aria-label="Colour (Non-CJK Text)" formControlName="displayColor"/>
+						<mat-select formControlName="displayColor">
+							<mat-option value="CUSTOM">Custom</mat-option>
+							<mat-option value="ROUTE_COLOR">Route Colour</mat-option>
+							<mat-option value="CONTRAST_COLOR">Contrast Colour</mat-option>
+						</mat-select>
 					</mat-form-field>
+					@if (hasCustomDisplayColor()) {
+						<mat-form-field subscriptSizing="dynamic">
+							<mat-label>Custom Colour (Non-CJK Text)</mat-label>
+							<input matInput type="color" aria-label="Colour (Non-CJK Text)" formControlName="displayColorCustom"/>
+						</mat-form-field>
+					}
 				</div>
 				<mat-form-field subscriptSizing="dynamic">
 					<mat-label>Max Line Height</mat-label>

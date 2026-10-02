@@ -44,6 +44,26 @@ export class EditVehicleModelPartDialog {
 		const {model, modelPropertiesPart} = this.data;
 		this.dataService.models().find(({id}) => id === model.modelResource)?.modelParts.forEach(name => this.modelPartNames.push(name));
 
+		let displayColorValue;
+		let displayColorCustomValue;
+		if (modelPropertiesPart.displayColor == "ROUTE_COLOR" || modelPropertiesPart.displayColor == "CONTRAST_COLOR") {
+			displayColorValue = modelPropertiesPart.displayColor;
+			displayColorCustomValue = "#ff9900";
+		} else {
+			displayColorValue = "CUSTOM";
+			displayColorCustomValue = `#${modelPropertiesPart.displayColor}`;
+		}
+
+		let displayColorCjkValue;
+		let displayColorCjkCustomValue;
+		if (modelPropertiesPart.displayColorCjk == "ROUTE_COLOR" || modelPropertiesPart.displayColorCjk == "CONTRAST_COLOR") {
+			displayColorCjkValue = modelPropertiesPart.displayColorCjk;
+			displayColorCjkCustomValue = "#ff9900";
+		} else {
+			displayColorCjkValue = "CUSTOM";
+			displayColorCjkCustomValue = `#${modelPropertiesPart.displayColorCjk}`;
+		}
+
 		this.formGroup = new FormGroup({
 			name: new FormControl(modelPropertiesPart.positionDefinition.name),
 			positions: new FormControl(EditVehicleModelPartDialog.positionsToString(modelPropertiesPart.positionDefinition.positions)),
@@ -53,8 +73,10 @@ export class EditVehicleModelPartDialog {
 			type: new FormControl(modelPropertiesPart.type),
 			displayXPadding: new FormControl(modelPropertiesPart.displayXPadding),
 			displayYPadding: new FormControl(modelPropertiesPart.displayYPadding),
-			displayColorCjk: new FormControl(`#${modelPropertiesPart.displayColorCjk}`),
-			displayColor: new FormControl(`#${modelPropertiesPart.displayColor}`),
+			displayColorCjk: new FormControl(displayColorCjkValue),
+			displayColorCjkCustom: new FormControl(displayColorCjkCustomValue),
+			displayColor: new FormControl(displayColorValue),
+			displayColorCustom: new FormControl(displayColorCustomValue),
 			displayMaxLineHeight: new FormControl(modelPropertiesPart.displayMaxLineHeight),
 			displayCjkSizeRatio: new FormControl(modelPropertiesPart.displayCjkSizeRatio),
 			displayPadZeros: new FormControl(modelPropertiesPart.displayPadZeros),
@@ -103,8 +125,16 @@ export class EditVehicleModelPartDialog {
 			modelPropertiesPart.type = newData.type ?? defaultModelPropertiesPart.type;
 			modelPropertiesPart.displayXPadding = newData.displayXPadding ?? defaultModelPropertiesPart.displayXPadding;
 			modelPropertiesPart.displayYPadding = newData.displayYPadding ?? defaultModelPropertiesPart.displayYPadding;
-			modelPropertiesPart.displayColorCjk = newData.displayColorCjk?.substring(1).toUpperCase() ?? defaultModelPropertiesPart.displayColorCjk;
-			modelPropertiesPart.displayColor = newData.displayColor?.substring(1).toUpperCase() ?? defaultModelPropertiesPart.displayColor;
+			if (newData.displayColorCjk == "CUSTOM") {
+				modelPropertiesPart.displayColorCjk = newData.displayColorCjkCustom ?? defaultModelPropertiesPart.displayColorCjk;
+			} else {
+				modelPropertiesPart.displayColorCjk = newData.displayColorCjk ?? defaultModelPropertiesPart.displayColorCjk;
+			}
+			if (newData.displayColor == "CUSTOM") {
+				modelPropertiesPart.displayColor = newData.displayColorCustom ?? defaultModelPropertiesPart.displayColor;
+			} else {
+				modelPropertiesPart.displayColor = newData.displayColor ?? defaultModelPropertiesPart.displayColor;
+			}
 			modelPropertiesPart.displayMaxLineHeight = Math.max(0, newData.displayMaxLineHeight ?? defaultModelPropertiesPart.displayMaxLineHeight);
 			modelPropertiesPart.displayCjkSizeRatio = Math.max(0, newData.displayCjkSizeRatio ?? defaultModelPropertiesPart.displayCjkSizeRatio);
 			modelPropertiesPart.displayPadZeros = Math.max(0, Math.round(newData.displayPadZeros ?? defaultModelPropertiesPart.displayPadZeros));
@@ -190,6 +220,14 @@ export class EditVehicleModelPartDialog {
 	isRouteColorDisplay() {
 		const displayType = this.formGroup.getRawValue().displayType;
 		return this.isDisplay() && (displayType === "ROUTE_COLOR" || displayType === "ROUTE_COLOR_ROUNDED");
+	}
+
+	hasCustomDisplayColor() {
+		return this.isDisplay() && this.formGroup.getRawValue().displayColor === "CUSTOM";
+	}
+
+	hasCustomDisplayColorCjk() {
+		return this.isDisplay() && this.formGroup.getRawValue().displayColorCjk === "CUSTOM";
 	}
 
 	formatPositions() {
