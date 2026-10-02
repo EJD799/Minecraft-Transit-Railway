@@ -381,6 +381,10 @@ public final class VehicleResource extends VehicleResourceSchema {
 				return vehicle.persistentVehicleData.getDoorValue() == 0 && noOpenDoorways;
 			case DOORS_OPENED:
 				return vehicle.persistentVehicleData.getDoorValue() > 0 || !noOpenDoorways;
+			case LANDING_GEAR_ACTIVE:
+				return !vehicle.getIsFlying();
+			case LANDING_GEAR_INACTIVE:
+				return vehicle.getIsFlying();
 			default:
 				return getChristmasLightState(partCondition);
 		}
