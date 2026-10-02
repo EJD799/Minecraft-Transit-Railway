@@ -1,0 +1,52 @@
+{
+	"replacements": {
+		"lengths": [
+			28
+		],
+		"id": [
+			"a220"
+		],
+		"name": [
+			"Airbus A220"
+		],
+		"color": [
+			"CCCCCC"
+		],
+		"tag": [
+			"None"
+		],
+		"texture": [
+			"a220"
+		]
+	},
+	"vehicles": [
+		{
+			"id": "@id@",
+			"name": "@name@",
+			"color": "@color@",
+			"transportMode": "AIRPLANE",
+			"width": 2,
+			"wikipediaArticle": "Airbus_A220",
+			"tags": [
+				"family:A220",
+				"brand:@tag@"
+			],
+			"models": [
+				{
+					"modelResource": "mtr:models/vehicle/a220.bbmodel",
+					"textureResource": "mtr:textures/vehicle/@texture@.png",
+					"modelPropertiesResource": "mtr:properties/vehicle/a220.json",
+					"positionDefinitionsResource": "mtr:properties/definition/a220.json"
+				}
+			],
+			"bogie1Models": [
+				{
+					"modelResource": "mtr:models/vehicle/a220.bbmodel",
+					"textureResource": "mtr:textures/vehicle/@texture@.png",
+					"modelPropertiesResource": "mtr:properties/vehicle/a220_landing_gear.json",
+					"positionDefinitionsResource": "mtr:properties/definition/a220.json"
+				}
+			]
+		}
+	]
+}

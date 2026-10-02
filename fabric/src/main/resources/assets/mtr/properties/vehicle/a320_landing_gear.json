@@ -7,7 +7,8 @@
 			"positionDefinitions": [
 				"main"
 			],
-			"renderStage": "EXTERIOR"
+			"renderStage": "EXTERIOR",
+			"condition": "LANDING_GEAR_ACTIVE"
 		}
 	],
 	"modelYOffset": 3.5
