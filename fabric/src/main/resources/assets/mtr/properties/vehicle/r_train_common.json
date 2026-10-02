@@ -302,6 +302,41 @@
 			],
 			"condition": "DOORS_CLOSED",
 			"renderStage": "EXTERIOR"
+		},
+		{
+			"names": [
+				"lcd_light"
+			],
+			"positionDefinitions": [
+				"door",
+				"doorFlipped",
+				"doorEnd1",
+				"doorEnd2",
+				"doorEnd1Flipped",
+				"doorEnd2Flipped"
+			],
+			"renderStage": "LIGHT"
+		},
+		{
+			"names": [
+				"lcd_next_station"
+			],
+			"positionDefinitions": [
+				"door",
+				"doorFlipped",
+				"doorEnd1",
+				"doorEnd2",
+				"doorEnd1Flipped",
+				"doorEnd2Flipped"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0,
+			"displayYPadding": 0.375,
+			"displayColor": "000000",
+			"displayOptions": [],
+			"displayCjkSizeRatio": 2,
+			"displayType": "NEXT_STATION",
+			"displayDefaultText": "回廠|Depot"
 		}
 	],
 	"modelYOffset": 1,
