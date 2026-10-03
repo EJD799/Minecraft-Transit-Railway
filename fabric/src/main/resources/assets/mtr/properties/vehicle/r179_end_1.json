@@ -65,7 +65,7 @@
 			"displayColor": "FF0000",
 			"displayType": "TEMPLATE",
 			"displayTemplateText": "THE NEXT STOP IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
-			"displayDefaultText": "NOT IN SERVICE"
+			"displayDefaultText": "NO PASSENGERS"
 		},
 		{
 			"names": [
@@ -85,7 +85,7 @@
 			"displayColor": "FF0000",
 			"displayType": "TEMPLATE",
 			"displayTemplateText": "THIS IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
-			"displayDefaultText": "NOT IN SERVICE"
+			"displayDefaultText": "NO PASSENGERS"
 		},
 		{
 			"names": [

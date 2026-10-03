@@ -174,6 +174,7 @@
 				"end2"
 			],
 			"type": "DISPLAY",
+			"condition": "DOORS_OPENED",
 			"displayXPadding": 0.275,
 			"displayYPadding": 0,
 			"displayColor": "FFFFFF",
@@ -183,7 +184,27 @@
 			],
 			"displayType": "TEMPLATE",
 			"displayTemplateText": "THIS IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
-			"displayDefaultText": "NOT IN SERVICE"
+			"displayDefaultText": "NO PASSENGERS"
+		},
+		{
+			"names": [
+				"head_display_main"
+			],
+			"positionDefinitions": [
+				"end2"
+			],
+			"type": "DISPLAY",
+			"condition": "DOORS_CLOSED",
+			"displayXPadding": 0.275,
+			"displayYPadding": 0,
+			"displayColor": "FFFFFF",
+			"displayOptions": [
+				"UPPER_CASE",
+				"CYCLE_LANGUAGES"
+			],
+			"displayType": "TEMPLATE",
+			"displayTemplateText": "THE NEXT STOP IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
+			"displayDefaultText": "NO PASSENGERS"
 		},
 		{
 			"names": [
