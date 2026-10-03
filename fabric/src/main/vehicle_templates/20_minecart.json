@@ -5,6 +5,8 @@
 			2,
 			2,
 			2,
+			2,
+			2,
 			2
 		],
 		"id": [
@@ -12,21 +14,27 @@
 			"chest_minecart",
 			"hopper_minecart",
 			"tnt_minecart",
-			"furnace_minecart"
+			"furnace_minecart",
+			"command_block_minecart",
+			"spawner_minecart"
 		],
 		"name": [
 			"Minecart",
 			"Minecart with Chest",
 			"Minecart with Hopper",
 			"Minecart with TNT",
-			"Minecart with Furnace"
+			"Minecart with Furnace",
+			"Minecart with Command Block",
+			"Minecart with Spawner"
 		],
 		"color": [
 			"A6A6A6",
 			"B38736",
 			"4A4A4A",
 			"D11500",
-			"717171"
+			"717171",
+		    "F5A24E",
+			"082024"
 		]
 	},
 	"vehicles": [
