@@ -7,6 +7,8 @@
 			2,
 			2,
 			2,
+			2,
+			2,
 			2
 		],
 		"id": [
@@ -16,6 +18,8 @@
 			"tnt_minecart",
 			"furnace_minecart",
 			"command_block_minecart",
+			"repeating_command_block_minecart",
+			"chain_command_block_minecart",
 			"spawner_minecart"
 		],
 		"name": [
@@ -24,7 +28,9 @@
 			"Minecart with Hopper",
 			"Minecart with TNT",
 			"Minecart with Furnace",
-			"Minecart with Command Block",
+			"Minecart with Command Block (Impulse)",
+			"Minecart with Command Block (Repeating)",
+			"Minecart with Command Block (Chain)",
 			"Minecart with Spawner"
 		],
 		"color": [
@@ -34,6 +40,8 @@
 			"D11500",
 			"717171",
 		    "F5A24E",
+			"552D87",
+			"66C4BE",
 			"082024"
 		]
 	},
