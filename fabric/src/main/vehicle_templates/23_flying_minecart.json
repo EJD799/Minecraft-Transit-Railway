@@ -7,16 +7,20 @@
 			2,
 			2,
 			2,
+			2,
+			2,
 			2
 		],
 		"id": [
-			"minecart",
-			"chest_minecart",
-			"hopper_minecart",
-			"tnt_minecart",
-			"furnace_minecart",
-			"command_block_minecart",
-			"spawner_minecart"
+			"flying_minecart",
+			"flying_chest_minecart",
+			"flying_hopper_minecart",
+			"flying_tnt_minecart",
+			"flying_furnace_minecart",
+			"flying_command_block_minecart",
+			"flying_repeating_command_block_minecart",
+			"flying_chain_command_block_minecart",
+			"flying_spawner_minecart"
 		],
 		"name": [
 			"Flying Minecart",
@@ -24,7 +28,9 @@
 			"Flying Minecart with Hopper",
 			"Flying Minecart with TNT",
 			"Flying Minecart with Furnace",
-			"Flying Minecart with Command Block",
+			"Flying Minecart with Command Block (Impulse)",
+			"Flying Minecart with Command Block (Repeating)",
+			"Flying Minecart with Command Block (Chain)",
 			"Flying Minecart with Spawner"
 		],
 		"color": [
@@ -34,6 +40,8 @@
 			"D11500",
 			"717171",
 		    "F5A24E",
+			"552D87",
+			"66C4BE",
 			"082024"
 		]
 	},
