@@ -6,6 +6,7 @@ import org.mtr.mod.generated.lang.TranslationProvider;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.core.data.Vehicle;
 import org.mtr.mod.resource.ModelPropertiesPart;
+import org.mtr.mapping.mapper.WorldHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +56,9 @@ public enum DisplayType {
 		final String routeName = ModelPropertiesPart.getOrDefault(routeNumber + " ", routeNumber, "") + getOrDefault(vehicle.vehicleExtraData.getThisRouteName(), vehicle.vehicleExtraData.getNextRouteName(), vehicle.vehicleExtraData.getPreviousRouteName(), displayDefaultText, vehicle).split("\|\|")[0];
 		final String thisStation = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getThisStationName(), vehicle.vehicleExtraData.getPreviousStationName());
 		final String nextStation = ModelPropertiesPart.getOrDefault(vehicle.vehicleExtraData.getNextStationName(), vehicle.vehicleExtraData.getThisStationName(), vehicle.vehicleExtraData.getThisStationName());
+		final String clock12hr = getClockText(false);
+		final String clock24hr = getClockText(true);
+		final String clockAMPM = getClockAMPM();
 
 		String text = templateText;
 		text = text.replaceAll("%DESTINATION%", destination);
@@ -62,7 +66,37 @@ public enum DisplayType {
 		text = text.replaceAll("%ROUTE_NAME%", routeName);
 		text = text.replaceAll("%THIS_STATION%", thisStation);
 		text = text.replaceAll("%NEXT_STATION%", nextStation);
+		text = text.replaceAll("%CLOCK_12HR%", clock12hr);
+		text = text.replaceAll("%CLOCK_24HR%", clock24hr);
+		text = text.replaceAll("%CLOCK_AM_PM_UPPER%", clockAMPM);
+		text = text.replaceAll("%CLOCK_AM_PM_LOWER%", clockAMPM.toLowerCase());
 
 		return text;
+	}
+
+	public static String getClockText(boolean is24hr) {
+		long time = WorldHelper.getTimeOfDay(context.world) + 6000;
+        long hours = time / 1000;
+        long minutes = (long)Math.floor((time - (hours * 1000)) / 16.8);
+        
+		String str = "";
+
+		if (is24hr) {
+			str += String.format("%02d", hours % 24);
+		} else {
+			str += hours % 12;
+		}
+
+		str += ":";
+
+		str += String.format("%02d", minutes % 60);
+		
+		return str;
+	}
+
+	public static String getClockAMPM() {
+		long time = WorldHelper.getTimeOfDay(context.world) + 6000;
+        long hours = time / 1000;
+		return (hours % 24 >= 12) ? "PM" : "AM";
 	}
 }

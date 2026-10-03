@@ -632,7 +632,7 @@ public final class ModelPropertiesPart extends ModelPropertiesPartSchema impleme
 				text = vehicle.getIsOnRoute() ? DisplayType.getLondonNextStationString(routeName, thisStation, nextStation, vehicle.vehicleExtraData::iterateInterchanges, destination, doorsOpen, vehicle.vehicleExtraData.getIsTerminating()) : displayDefaultText;
 				break;
 			case TEMPLATE:
-				text = vehicle.getIsOnRoute() ? DisplayText.getTemplateText(displayTemplateText, vehicle) : displayDefaultText;
+				text = vehicle.getIsOnRoute() ? DisplayType.getTemplateText(displayTemplateText, vehicle) : displayDefaultText;
 				break;
 			default:
 				text = "";

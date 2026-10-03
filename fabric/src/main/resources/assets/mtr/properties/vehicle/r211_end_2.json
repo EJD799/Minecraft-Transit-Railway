@@ -99,7 +99,7 @@
 				"CYCLE_LANGUAGES"
 			],
 			"displayType": "TEMPLATE",
-			"displayTemplateText": "THIS IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
+			"displayTemplateText": "THIS IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR% %CLOCK_AM_PM_UPPER%",
 			"displayDefaultText": "NO PASSENGERS"
 		},
 		{
@@ -119,7 +119,7 @@
 				"CYCLE_LANGUAGES"
 			],
 			"displayType": "TEMPLATE",
-			"displayTemplateText": "THE NEXT STOP IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR%",
+			"displayTemplateText": "THE NEXT STOP IS|%NEXT_STATION%|%ROUTE_NAME%|TO %DESTINATION%|%CLOCK_12HR% %CLOCK_AM_PM_UPPER%",
 			"displayDefaultText": "NO PASSENGERS"
 		},
 		{
