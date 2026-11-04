@@ -8,8 +8,7 @@
 			"positionDefinitions": [
 				"main"
 			],
-			"renderStage": "EXTERIOR",
-			"condition": "LANDING_GEAR_ACTIVE"
+			"renderStage": "EXTERIOR"
 		},
 		{
 			"names": [
@@ -18,8 +17,7 @@
 			"positionDefinitions": [
 				"landingGearBack"
 			],
-			"renderStage": "EXTERIOR",
-			"condition": "LANDING_GEAR_ACTIVE"
+			"renderStage": "EXTERIOR"
 		},
 		{
 			"names": [
