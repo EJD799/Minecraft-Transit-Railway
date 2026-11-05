@@ -161,7 +161,8 @@
 			"displayXPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Not In Service"
@@ -177,7 +178,8 @@
 			"displayXPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Not In Service"
@@ -194,9 +196,28 @@
 			"displayYPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "NEXT_STATION_UK"
+		},
+		{
+			"names": [
+				"head_display"
+			],
+			"positionDefinitions": [
+				"end1Flipped"
+			],
+			"type": "DISPLAY",
+			"displayXPadding": 0.475,
+			"displayYPadding": 0.225,
+			"displayColor": "FF9900",
+			"displayOptions": [
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
+			],
+			"displayType": "DESTINATION",
+			"displayDefaultText": "Not In Service"
 		}
 	],
 	"modelYOffset": 1

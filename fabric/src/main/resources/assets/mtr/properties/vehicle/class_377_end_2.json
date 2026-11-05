@@ -119,7 +119,8 @@
 			"displayXPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Not In Service"
@@ -135,7 +136,8 @@
 			"displayXPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "DESTINATION",
 			"displayDefaultText": "Not In Service"
@@ -152,7 +154,8 @@
 			"displayYPadding": 0.5,
 			"displayColor": "FF9900",
 			"displayOptions": [
-				"SCROLL_NORMAL"
+				"SCROLL_NORMAL",
+				"SINGLE_LINE"
 			],
 			"displayType": "NEXT_STATION_UK"
 		}
