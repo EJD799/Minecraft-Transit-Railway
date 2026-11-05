@@ -36,7 +36,8 @@
 			5,
 			5,
 			5,
-			5
+			5,
+			2
 		],
 		"id": [
 			"boat_small",
@@ -74,7 +75,8 @@
 			"boat_medium_two_level",
 			"boat_medium_two_level",
 			"boat_medium_two_level",
-			"boat_medium_two_level"
+			"boat_medium_two_level",
+			"raft"
 		],
 		"tag": [
 			"oak",
@@ -112,7 +114,8 @@
 			"dark_oak",
 			"mangrove",
 			"cherry",
-			"iron"
+			"iron",
+			"bamboo"
 		],
 		"model": [
 			"boat_small",
@@ -150,7 +153,8 @@
 			"boat_medium",
 			"boat_medium",
 			"boat_medium",
-			"boat_medium"
+			"boat_medium",
+			"raft"
 		],
 		"definition": [
 			"boat_1",
@@ -188,7 +192,8 @@
 			"boat_2",
 			"boat_2",
 			"boat_2",
-			"boat_2"
+			"boat_2",
+			"raft"
 		],
 		"name": [
 			"Oak Boat (Small)",
@@ -226,7 +231,8 @@
 			"Dark Oak Boat (Medium, Two Level)",
 			"Mangrove Boat (Medium, Two Level)",
 			"Cherry Boat (Medium, Two Level)",
-			"Iron Boat (Medium, Two Level)"
+			"Iron Boat (Medium, Two Level)",
+			"Bamboo Raft"
 		],
 		"color": [
 			"C3A477",
@@ -264,7 +270,8 @@
 			"7F5126",
 			"985641",
 			"EECFCA",
-			"E6E6E6"
+			"E6E6E6",
+			"E0C141"
 		]
 	},
 	"vehicles": [
