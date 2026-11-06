@@ -5,7 +5,7 @@
 				"window_exterior_4"
 			],
 			"positionDefinitions": [
-				"b20d0645"
+				"window_4"
 			],
 			"renderStage": "EXTERIOR"
 		},
@@ -14,7 +14,7 @@
 				"window_4"
 			],
 			"positionDefinitions": [
-				"9d6887a2"
+				"window_4"
 			],
 			"renderStage": "INTERIOR"
 		},
@@ -23,7 +23,7 @@
 				"end"
 			],
 			"positionDefinitions": [
-				"f02c70a1"
+				"end"
 			],
 			"renderStage": "INTERIOR"
 		},
@@ -32,7 +32,7 @@
 				"light"
 			],
 			"positionDefinitions": [
-				"2267a69"
+				"light"
 			],
 			"renderStage": "LIGHT"
 		},
@@ -41,7 +41,7 @@
 				"end_exterior"
 			],
 			"positionDefinitions": [
-				"7d74e4cc"
+				"end_exterior"
 			],
 			"renderStage": "EXTERIOR"
 		},
@@ -50,7 +50,7 @@
 				"seat_horizontal"
 			],
 			"positionDefinitions": [
-				"c89b5814"
+				"seat_horizontal"
 			],
 			"renderStage": "INTERIOR"
 		},
@@ -59,7 +59,7 @@
 				"window_4_floor"
 			],
 			"positionDefinitions": [
-				"e8a9ea68"
+				"window_4_floor"
 			],
 			"renderStage": "EXTERIOR",
 			"type": "FLOOR"
@@ -69,7 +69,7 @@
 				"interior_side_display"
 			],
 			"positionDefinitions": [
-				"7db045ae"
+				"window_4"
 			],
 			"type": "DISPLAY",
 			"displayXPadding": 0.575,
@@ -90,7 +90,7 @@
 				"exterior_display"
 			],
 			"positionDefinitions": [
-				"bcf3e741"
+				"window_4"
 			],
 			"type": "DISPLAY",
 			"displayXPadding": 0.2,
@@ -111,7 +111,7 @@
 				"exterior_route_color_display"
 			],
 			"positionDefinitions": [
-				"bcf3e741"
+				"exterior_display"
 			],
 			"type": "DISPLAY",
 			"displayXPadding": 0.3,
