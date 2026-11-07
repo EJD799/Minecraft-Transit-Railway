@@ -144,7 +144,7 @@
 				"side_panel"
 			],
 			"positionDefinitions": [
-				"side_panel"
+				"window"
 			],
 			"condition": "NORMAL",
 			"renderStage": "INTERIOR",
@@ -166,7 +166,7 @@
 				"side_panel_translucent"
 			],
 			"positionDefinitions": [
-				"side_panel"
+				"window"
 			],
 			"condition": "NORMAL",
 			"renderStage": "INTERIOR_TRANSLUCENT",
