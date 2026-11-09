@@ -1,0 +1,180 @@
+{
+	"positionDefinitions": [
+		{
+			"name": "windowEnd1",
+			"positions": [
+				{
+					"z": -60
+				}
+			]
+		},
+		{
+			"name": "windowEnd1Flipped",
+			"positionsFlipped": [
+				{
+					"z": -60
+				}
+			]
+		},
+		{
+			"name": "windowEnd2",
+			"positionsFlipped": [
+				{
+					"z": 60
+				}
+			]
+		},
+		{
+			"name": "windowEnd2Flipped",
+			"positions": [
+				{
+					"z": 60
+				}
+			]
+		},
+		{
+			"name": "sidePanel",
+			"positions": [
+				{
+					"z": -28.5
+				},
+				{
+					"z": 28.5
+				}
+			],
+			"positionsFlipped": [
+				{
+					"z": -28.5
+				},
+				{
+					"z": 28.5
+				}
+			]
+		},
+		{
+			"name": "sidePanelEnd1",
+			"positions": [
+				{
+					"z": -91.5
+				}
+			],
+			"positionsFlipped": [
+				{
+					"z": -91.5
+				}
+			]
+		},
+		{
+			"name": "sidePanelEnd2",
+			"positions": [
+				{
+					"z": 91.5
+				}
+			],
+			"positionsFlipped": [
+				{
+					"z": 91.5
+				}
+			]
+		},
+		{
+			"name": "door",
+			"positions": [
+				{
+					"z": 0
+				}
+			]
+		},
+		{
+			"name": "doorFlipped",
+			"positionsFlipped": [
+				{
+					"z": 0
+				}
+			]
+		},
+		{
+			"name": "doorEnd1",
+			"positions": [
+				{
+					"z": -108
+				}
+			]
+		},
+		{
+			"name": "doorEnd1Flipped",
+			"positionsFlipped": [
+				{
+					"z": -108
+				}
+			]
+		},
+		{
+			"name": "doorEnd2",
+			"positionsFlipped": [
+				{
+					"z": 108
+				}
+			]
+		},
+		{
+			"name": "doorEnd2Flipped",
+			"positions": [
+				{
+					"z": 108
+				}
+			]
+		},
+		{
+			"name": "end1Flipped",
+			"positionsFlipped": [
+				{
+					"z": -60
+				}
+			]
+		},
+		{
+			"name": "end2Flipped",
+			"positions": [
+				{
+					"z": 60
+				}
+			]
+		},
+		{
+			"name": "seatHead1",
+			"positionsFlipped": [
+				{
+					"z": -51
+				}
+			]
+		},
+		{
+			"name": "seatHead2",
+			"positions": [
+				{
+					"z": 51
+				}
+			]
+		},
+		{
+			"name": "doorLight",
+			"positions": [
+				{
+					"z": -60
+				},
+				{
+					"z": 60
+				}
+			],
+			"positionsFlipped": [
+				{
+					"z": -60
+				},
+				{
+					"z": 60
+				}
+			]
+		}
+	]
+}
