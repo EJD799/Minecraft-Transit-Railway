@@ -85,6 +85,20 @@
 			]
 		},
 		{
+			"name": "doorWindow",
+			"positionsFlipped": [
+				{
+					"z": -96
+				},
+				{
+					"z": 0
+				},
+				{
+					"z": 96
+				}
+			]
+		},
+		{
 			"name": "doorFlipped",
 			"positions": [
 				{
