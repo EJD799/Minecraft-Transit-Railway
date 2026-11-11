@@ -64,7 +64,6 @@ public enum DisplayType {
 		text = text.replaceAll("%DESTINATION%", destination);
 		text = text.replaceAll("%ROUTE_NUMBER%", routeNumber);
 		text = text.replaceAll("%ROUTE_NAME%", routeName);
-		text = text.replaceAll("%THIS_STATION%", thisStation);
 		text = text.replaceAll("%NEXT_STATION%", nextStation);
 		text = text.replaceAll("%CLOCK_12HR%", clock12hr);
 		text = text.replaceAll("%CLOCK_24HR%", clock24hr);
